@@ -1,0 +1,24 @@
+I built ArtHub as a MERN project in arthub.zip. I couldn’t run npm install or start it here, so it hasn’t been run.
+
+To run it (MongoDB must be running locally):
+
+cd server && cp .env.example .env && npm i && npm run dev
+cd client && npm i && npm run dev, then open http://localhost:5173
+The admin account is seeded on first start from .env: admin@arthub.com / Admin@123. Change it there.
+
+What’s included
+
+Backend: Express, Mongoose, JWT with bcrypt, and Multer image uploads. Role-based route guards cover buyer, artist and admin.
+Visitors:
+Home page with featured works, top-rated works and artists.
+Gallery with search, category filter and sorting.
+Artwork detail pages with reviews.
+Artist profile pages.
+Authentication: One login/register page where people pick Buyer or Artist. Everyone then lands on /dashboard, which shows the buyer, artist or admin dashboard for their role.
+Artist dashboard: Profile with avatar and bio, artwork upload, edit and delete through a modal, and an orders and sales table with revenue. Artists can update order status.
+Buyer dashboard: Cart (kept in localStorage), checkout with a shipping address, order history, and ratings and reviews. Only people who bought an artwork can review it.
+Community: Posts with images, comments, and direct messaging with conversation lists. The chat refreshes by polling every 4 seconds.
+Admin dashboard: Block or delete users, feature or delete artworks, update order status, and delete community posts.
+Design: An ivory, charcoal and gold gallery look using Bootstrap, react-bootstrap and custom CSS, responsive across screen sizes.
+
+I kept this build lean, so these are not included: password reset, online payments, pagination, and email notifications. Checkout creates the order without taking payment.
